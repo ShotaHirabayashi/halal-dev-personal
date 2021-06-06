@@ -6,12 +6,13 @@ import {getRestaurantSmallData,getAllAreaSmallIds} from '../../lib/restaurantSma
 
 
 export default function RestraurantSmall({restaurant_list}){
-    if(!restaurant_list){
-        return <div>...Loading</div>
+    if(restaurant_list.restaurant_list.length===0){
+        return (<Layout><div className='mt-5'>Restaurant is not found around this area</div></Layout>)
     }
     
     return (
     <Layout>
+        <h2>Restraurant list about this area</h2>
         <ul className='mt-5'>
             {restaurant_list && restaurant_list.restaurant_list.map((restaurant) => <RestaurantSmallComp key={restaurant.store_id} restaurant={restaurant} />)}
         </ul>
@@ -29,6 +30,7 @@ export async function getStaticPaths(){
 
 export async function getStaticProps({params}){
     const restaurant_list = await (getRestaurantSmallData(params.area_s));
+
     return {
         props: {
             restaurant_list

@@ -7,7 +7,7 @@ import {getAreaSmallData,getAllAreaSmallIds} from '../../lib/areaMiddle'
 
 
 export default function AreaMiddle({area_s}){
-    if(!area_s){
+    if(area_s.area_s_filtered.length === 0){
         return <div>...Loading</div>
     }
     

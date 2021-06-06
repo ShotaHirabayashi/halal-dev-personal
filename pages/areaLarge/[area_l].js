@@ -6,14 +6,14 @@ import {getAreaMiddleData,getAllAreaMiddleIds} from '../../lib/areaLarge'
 
 
 export default function AreaMiddle({area_m}){
-    if(!area_m){
+    if(area_m.area_m_filtered.length === 0){
         return <div>...Loading</div>
     }
     
     return (<Layout title={area_m.areacode_m}>
         <ul className='mt-5'>
-           {area_m && area_m.area_m_filtered.map((area) => <AreaMiddleComp key={area.areacode_m} area={area} />)}
-         </ul>
+            {area_m && area_m.area_m_filtered.map((area) => <AreaMiddleComp key={area.areacode_m} area={area} />)}
+        </ul>
     </Layout>)
 }
 
