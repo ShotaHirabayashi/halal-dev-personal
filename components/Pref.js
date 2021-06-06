@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-const Pref = ({pref}) => {
+const PrefComp = ({pref}) => {
     return (
         <div>
             <span>{pref.pref_code}</span>{":"}

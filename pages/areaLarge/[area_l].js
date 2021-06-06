@@ -2,7 +2,6 @@ import Link from 'next/link'
 import Layout from '../../components/Layout'
 import AreaMiddleComp from '../../components/AreaMiddle'
 
-
 import {getAreaMiddleData,getAllAreaMiddleIds} from '../../lib/areaLarge'
 
 
@@ -17,8 +16,6 @@ export default function AreaMiddle({area_m}){
          </ul>
     </Layout>)
 }
-
-
 
 // ビルド時に取得
 export async function getStaticPaths(){

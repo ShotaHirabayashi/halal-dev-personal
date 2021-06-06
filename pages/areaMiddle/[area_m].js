@@ -18,8 +18,6 @@ export default function AreaMiddle({area_s}){
     </Layout>)
 }
 
-
-
 // ビルド時に取得
 export async function getStaticPaths(){
     const paths = await getAllAreaSmallIds();

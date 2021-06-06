@@ -1,7 +1,5 @@
-import Link from 'next/link'
 import Layout from '../../components/Layout'
 import AreaLargeComp from '../../components/AreaLarge'
-
 
 import {getAreaLargeData,getAllAreaLargeIds} from '../../lib/pref'
 
@@ -12,15 +10,11 @@ export default function AreaLarge({area_l}){
     }
     
     return (<Layout title={area_l.areacode_l}>
-        {/* <p>{area_l.areacode_l}</p>
-        <br /><br />
-        <p>{area_l.areaname_l}</p> */}
         <ul className='mt-5'>
            {area_l && area_l.area_l_filtered.map((area) => <AreaLargeComp key={area.areacode_l} area={area} />)}
          </ul>
     </Layout>)
 }
-
 
 
 // ビルド時に取得

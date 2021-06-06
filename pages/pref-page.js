@@ -1,21 +1,20 @@
 
 import Layout from '../components/Layout'
 import {getAllPrefData} from '../lib/pref'
-import Pref from '../components/Pref'
+import PrefComp from '../components/PrefComp'
 
 
-const Blog = ({prefs}) => {
+const Pref = ({prefs}) => {
     return (
         <Layout title="blog">
             <ul className='mt-5'>
-           {prefs && prefs.map((pref) => <Pref key={pref.pref_code} pref={pref} />)}
+           {prefs && prefs.map((pref) => <PrefComp key={pref.pref_code} pref={pref} />)}
            </ul>
         </Layout>
     )
 }
 
-export default Blog
-
+export default Pref
 
 export async function getStaticProps(){
     const prefs = await getAllPrefData()
