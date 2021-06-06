@@ -11,4 +11,4 @@ const PrefComp = ({pref}) => {
     )
 }
 
-export default Pref
+export default PrefComp
