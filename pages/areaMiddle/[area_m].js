@@ -13,8 +13,8 @@ export default function AreaMiddle({area_s}){
     
     return (<Layout title={area_s.areacode_s}>
         <ul className='mt-5'>
-           {area_s && area_s.area_s_filtered.map((area) => <AreaSmallComp key={area.areacode_s} area={area} />)}
-         </ul>
+            {area_s && area_s.area_s_filtered.map((area) => <AreaSmallComp key={area.areacode_s} area={area} />)}
+        </ul>
     </Layout>)
 }
 

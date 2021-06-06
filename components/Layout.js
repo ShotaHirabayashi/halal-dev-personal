@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export default function Layout({children, title="HP by bayashi"}) {
     return(
-        <div className="min-h-screen flex flex-col justify-center items-center text-sm text-gray-600 font-mono">
+        <div className="flex justify-center items-center flex-col min-h-screen text-gray-600 text-sm font-mono">
             <Head>
                 <title>{title}</title>
             </Head>
@@ -31,7 +31,7 @@ export default function Layout({children, title="HP by bayashi"}) {
 
                 </nav>
             </header>
-            <main className="flex flex-1 justify-center items-center w-screen">
+            <main className="flex flex-1 justify-center items-center flex-col w-screen">
                 {children}
             </main>
         </div>
