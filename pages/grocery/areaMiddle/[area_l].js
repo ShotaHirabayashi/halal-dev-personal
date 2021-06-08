@@ -1,8 +1,8 @@
 import Link from 'next/link'
-import Layout from '../../components/Layout'
-import AreaMiddleComp from '../../components/AreaMiddle'
+import Layout from '../../../components/Layout'
+import AreaMiddleComp from '../../../components/AreaMiddle'
 
-import {getAreaMiddleData,getAllAreaMiddleIds} from '../../lib/areaLarge'
+import {getAreaMiddleData,getAllAreaMiddleIds} from '../../..//lib/areaLarge'
 
 
 export default function AreaMiddle({area_m}){
@@ -12,7 +12,7 @@ export default function AreaMiddle({area_m}){
     
     return (<Layout title={area_m.areacode_m}>
         <ul className='mt-5'>
-            {area_m && area_m.area_m_filtered.map((area) => <AreaMiddleComp key={area.areacode_m} area={area} />)}
+            {area_m && area_m.area_m_filtered.map((area) => <AreaMiddleComp key={area.areacode_m} area={area} category="grocery" />)}
         </ul>
     </Layout>)
 }

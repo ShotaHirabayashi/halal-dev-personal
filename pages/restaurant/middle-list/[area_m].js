@@ -1,8 +1,8 @@
-import Layout from '../../components/Layout'
-import RestaurantMiddleComp from '../../components/RestaurantMiddle'
+import Layout from '../../../components/Layout'
+import MiddleListComp from '../../../components/MiddleList'
 
 
-import {getAllAreaMiddleIds,getRestaurantMiddleData} from '../../lib/restaurantMiddle'
+import {getAllAreaMiddleIds,getRestaurantMiddleData} from '../../../lib/restaurantMiddle'
 
 
 export default function RestraurantSmall({restaurant_list}){
@@ -14,7 +14,7 @@ export default function RestraurantSmall({restaurant_list}){
     <Layout>
         <h2>Restraurant list about this area</h2>
         <ul className='mt-5'>
-            {restaurant_list && restaurant_list.restaurant_list.map((restaurant) => <RestaurantMiddleComp key={restaurant.store_id} restaurant={restaurant} />)}
+            {restaurant_list && restaurant_list.restaurant_list.map((restaurant) => <MiddleListComp key={restaurant.store_id} store={restaurant} category="restaurant"/>)}
         </ul>
     </Layout>)
 }

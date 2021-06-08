@@ -1,7 +1,7 @@
-import Layout from '../../components/Layout'
-import AreaLargeComp from '../../components/AreaLarge'
+import Layout from '../../../components/Layout'
+import AreaLargeComp from '../../../components/AreaLarge'
 
-import {getAreaLargeData,getAllAreaLargeIds} from '../../lib/pref'
+import {getAreaLargeData,getAllAreaLargeIds} from '../../../lib/pref'
 
 
 export default function AreaLarge({area_l}){
@@ -11,7 +11,7 @@ export default function AreaLarge({area_l}){
     
     return (<Layout title={area_l.areacode_l}>
         <ul className='mt-5'>
-           {area_l && area_l.area_l_filtered.map((area) => <AreaLargeComp key={area.areacode_l} area={area} />)}
+           {area_l && area_l.area_l_filtered.map((area) => <AreaLargeComp key={area.areacode_l} area={area} category="grocery" />)}
          </ul>
     </Layout>)
 }

@@ -1,6 +1,6 @@
 
-import Layout from '../../components/Layout'
-import {getAllDetailData,getRestaurantDetailData,getAllRestaurantDetailIds} from '../../lib/restaunrantDetail'
+import Layout from '../../../components/Layout'
+import {getAllDetailData,getRestaurantDetailData,getAllRestaurantDetailIds} from '../../../lib/restaunrantDetail'
 
 
 const RestaurantDetail = ({restaurant}) => {
