@@ -1,8 +1,8 @@
 import Layout from '../../components/Layout'
-import RestaurantSmallComp from '../../components/RestaurantSmall'
+import RestaurantMiddleComp from '../../components/RestaurantMiddle'
 
 
-import {getRestaurantSmallData,getAllAreaSmallIds} from '../../lib/restaurantSmall'
+import {getAllAreaMiddleIds,getRestaurantMiddleData} from '../../lib/restaurantMiddle'
 
 
 export default function RestraurantSmall({restaurant_list}){
@@ -14,14 +14,14 @@ export default function RestraurantSmall({restaurant_list}){
     <Layout>
         <h2>Restraurant list about this area</h2>
         <ul className='mt-5'>
-            {restaurant_list && restaurant_list.restaurant_list.map((restaurant) => <RestaurantSmallComp key={restaurant.store_id} restaurant={restaurant} />)}
+            {restaurant_list && restaurant_list.restaurant_list.map((restaurant) => <RestaurantMiddleComp key={restaurant.store_id} restaurant={restaurant} />)}
         </ul>
     </Layout>)
 }
 
 // ビルド時に取得
 export async function getStaticPaths(){
-    const paths = await getAllAreaSmallIds();
+    const paths = await getAllAreaMiddleIds();
     return {
         paths,
         fallback:false,
@@ -29,7 +29,7 @@ export async function getStaticPaths(){
 }
 
 export async function getStaticProps({params}){
-    const restaurant_list = await (getRestaurantSmallData(params.area_s));
+    const restaurant_list = await (getRestaurantMiddleData(params.area_m));
 
     return {
         props: {

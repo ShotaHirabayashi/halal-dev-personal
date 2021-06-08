@@ -1,5 +1,5 @@
 
-const RestaurantSmallComp = ({restaurant}) => {
+const RestaurantMiddleComp = ({restaurant}) => {
     return (
         <div>
             <span>{restaurant.store_name}</span>{":"}
@@ -8,4 +8,4 @@ const RestaurantSmallComp = ({restaurant}) => {
     )
 }
 
-export default RestaurantSmallComp
+export default RestaurantMiddleComp
