@@ -9,8 +9,8 @@ const RestaurantPriority = ({restaurants}) => {
         <Layout title="tags">
             <h3>Restaurant Priority(上位20件)</h3>
             <ul className='mt-5'>
-           {restaurants && restaurants.map((restaurant) => <RestraurantPriorityComp key={restaurant.store_id} restaurant={restaurant} />)}
-           </ul>
+                {restaurants && restaurants.map((restaurant) => <RestraurantPriorityComp key={restaurant.store_id} restaurant={restaurant} />)}
+            </ul>
         </Layout>
     )
 }
