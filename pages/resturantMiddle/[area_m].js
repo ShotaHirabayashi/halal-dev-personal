@@ -7,7 +7,7 @@ import {getAllAreaMiddleIds,getRestaurantMiddleData} from '../../lib/restaurantM
 
 export default function RestraurantSmall({restaurant_list}){
     if(restaurant_list.restaurant_list.length===0){
-        return (<Layout><div className='mt-5'>Restaurant is not found around this area</div></Layout>)
+        return (<Layout><div className='mt-5'>Restaurant is not found around this area.</div></Layout>)
     }
     
     return (
