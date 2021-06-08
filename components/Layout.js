@@ -23,7 +23,17 @@ export default function Layout({children, title="HP by bayashi"}) {
                             </Link>
                             <Link href="/pref-page">
                                 <a className="text-gray-300 hover:gb-gray-700 px-3 py-2 rounded">
-                                    PREF
+                                    RESTAURANT
+                                </a>
+                            </Link>
+                            <Link href="/restaurant-tags">
+                                <a className="text-gray-300 hover:gb-gray-700 px-3 py-2 rounded">
+                                    TAGS
+                                </a>
+                            </Link>
+                            <Link href="/restaurant-priority">
+                                <a className="text-gray-300 hover:gb-gray-700 px-3 py-2 rounded">
+                                    PRIORITY
                                 </a>
                             </Link>
                         </div>
