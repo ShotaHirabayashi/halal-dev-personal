@@ -7,9 +7,7 @@ const RestaurantDetail = ({restaurant}) => {
     return (
         <Layout title={restaurant.store_name}>
             <p>{restaurant.store_name}</p>
-            <p>{restaurant.area_middle.areaname_m}</p>
             <p>{restaurant.address}</p>
-            <p>{restaurant.ss}</p>
             <p>{restaurant.main_msg}</p>
             <img src={restaurant.main_img} height={100} />
         </Layout>
