@@ -23,8 +23,7 @@ export async function getStaticPaths(){
 
     return {
         paths,
-        // 101番の場合は404
-        fallback:true,
+        fallback:false,
     }
 }
 
@@ -35,6 +34,5 @@ export async function getStaticProps({params}){
         props: {
             grocery
         },
-        revalidate:3600,
     }
 }
