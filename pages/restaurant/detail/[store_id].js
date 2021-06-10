@@ -1,4 +1,4 @@
-
+import {useRouter} from 'next/router'
 import Layout from '../../../components/Layout'
 import {getAllDetailData,getRestaurantDetailData,getAllRestaurantDetailIds} from '../../../lib/restaunrantDetail'
 
@@ -22,8 +22,7 @@ export async function getStaticPaths(){
 
     return {
         paths,
-        // 101番の場合は404
-        fallback:false,
+        fallback:true,
     }
 }
 
@@ -33,6 +32,7 @@ export async function getStaticProps({params}){
     return {
         props: {
             restaurant
-        }
+        },
+        revalidate:3600,
     }
 }

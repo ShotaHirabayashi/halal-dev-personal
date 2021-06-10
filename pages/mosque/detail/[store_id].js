@@ -1,4 +1,3 @@
-
 import Layout from '../../../components/Layout'
 import {getMosqueDetailData,getAllMosqueDetailIds} from '../../../lib/mosqueDetail'
 
@@ -22,8 +21,7 @@ export async function getStaticPaths(){
 
     return {
         paths,
-        // 101番の場合は404
-        fallback:false,
+        fallback:true,
     }
 }
 
@@ -33,6 +31,7 @@ export async function getStaticProps({params}){
     return {
         props: {
             mosque
-        }
+        },
+        revalidate:3600,
     }
 }

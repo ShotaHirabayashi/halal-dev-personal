@@ -1,11 +1,14 @@
 import Layout from '../../../components/Layout'
 import AreaMiddleComp from '../../../components/AreaMiddle'
-
+import {useRouter} from 'next/router'
 import {getAreaMiddleData,getAllAreaMiddleIds} from '../../../lib/areaLarge'
 
 
 export default function AreaMiddle({area_m}){
-    if(area_m.area_m_filtered.length === 0){
+
+    const router = useRouter()
+
+    if(router.isFallback || !area_m.area_m_filtered.length){
         return <div>...Loading</div>
     }
     
@@ -21,7 +24,7 @@ export async function getStaticPaths(){
     const paths = await getAllAreaMiddleIds();
     return {
         paths,
-        fallback:false,
+        fallback:true,
     }
 }
 

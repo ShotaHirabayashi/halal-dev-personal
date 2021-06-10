@@ -1,12 +1,15 @@
 import Layout from '../../../components/Layout'
 import MiddleListComp from '../../../components/MiddleList'
+import {useRouter} from 'next/router'
 
 
 import {getAllAreaMiddleIds,getGroceryMiddleData} from '../../../lib/groceryMiddle'
 
 
 export default function RestraurantSmall({grocery_list}){
-    if(grocery_list.grocery_list.length===0){
+
+    const router = useRouter()
+    if(router.isFallback || !grocery_list.grocery_list.length){
         return (<Layout><div className='mt-5'>Grocery is not found around this area.</div></Layout>)
     }
     
@@ -24,7 +27,7 @@ export async function getStaticPaths(){
     const paths = await getAllAreaMiddleIds();
     return {
         paths,
-        fallback:false,
+        fallback:true,
     }
 }
 
@@ -34,6 +37,7 @@ export async function getStaticProps({params}){
     return {
         props: {
             grocery_list
-        }
+        },
+        revalidate:3600,
     }
 }

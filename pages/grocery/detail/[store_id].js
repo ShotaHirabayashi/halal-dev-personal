@@ -1,6 +1,7 @@
 
 import Layout from '../../../components/Layout'
 import {getAllDetailData,getGroceryDetailData,getAllGroceryDetailIds} from '../../../lib/groceryDetail'
+import {useRouter} from 'next/router'
 
 
 const GroceryDetail = ({grocery}) => {
@@ -23,7 +24,7 @@ export async function getStaticPaths(){
     return {
         paths,
         // 101番の場合は404
-        fallback:false,
+        fallback:true,
     }
 }
 
@@ -33,6 +34,7 @@ export async function getStaticProps({params}){
     return {
         props: {
             grocery
-        }
+        },
+        revalidate:3600,
     }
 }

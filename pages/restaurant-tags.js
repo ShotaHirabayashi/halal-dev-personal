@@ -9,8 +9,8 @@ const RestaurantTags = ({tags}) => {
         <Layout title="tags">
             <h3>Restaurant tags</h3>
             <ul className='mt-5'>
-           {tags && tags.map((tag) => <TagsComp key={tag.slug} tag={tag} />)}
-           </ul>
+                {tags && tags.map((tag) => <TagsComp key={tag.slug} tag={tag} />)}
+            </ul>
         </Layout>
     )
 }

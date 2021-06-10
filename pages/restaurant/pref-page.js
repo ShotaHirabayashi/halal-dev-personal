@@ -8,8 +8,8 @@ const Pref = ({prefs}) => {
     return (
         <Layout title="pref">
             <ul className='mt-5'>
-           {prefs && prefs.map((pref) => <PrefComp key={pref.pref_code} pref={pref} category="restaurant"/>)}
-           </ul>
+                {prefs && prefs.map((pref) => <PrefComp key={pref.pref_code} pref={pref} category="restaurant"/>)}
+            </ul>
         </Layout>
     )
 }

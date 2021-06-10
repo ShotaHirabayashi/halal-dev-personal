@@ -8,8 +8,8 @@ const Blog = ({posts}) => {
     return (
         <Layout title="blog">
             <ul>
-           {posts && posts.map((post) => <Post key={post.id} post={post} />)}
-           </ul>
+                {posts && posts.map((post) => <Post key={post.id} post={post} />)}
+            </ul>
         </Layout>
     )
 }

@@ -1,11 +1,14 @@
 import Link from 'next/link'
 import Layout from '../../components/Layout'
-
+import {useRouter} from 'next/router'
 import {getAllPostsIds,getPostData} from '../../lib/posts'
 
 
 export default function Post({post}){
-    if(!post){
+
+    const router = useRouter()
+
+    if(router.isFallback || !post){
         return <div>...Loading</div>
     }
 

@@ -1,12 +1,13 @@
 import Layout from '../../../components/Layout'
 import MiddleListComp from '../../../components/MiddleList'
-
-
+import {useRouter} from 'next/router'
 import {getAllAreaMiddleIds,getMosqueMiddleData} from '../../../lib/mosqueMiddle'
 
 
 export default function RestraurantSmall({mosque_list}){
-    if(mosque_list.mosque_list.length===0){
+    const router = useRouter()
+
+    if(router.isFallback || !mosque_list.mosque_list.length){
         return (<Layout><div className='mt-5'>Mosque is not found around this area.</div></Layout>)
     }
     
@@ -24,7 +25,7 @@ export async function getStaticPaths(){
     const paths = await getAllAreaMiddleIds();
     return {
         paths,
-        fallback:false,
+        fallback:true,
     }
 }
 
@@ -34,6 +35,7 @@ export async function getStaticProps({params}){
     return {
         props: {
             mosque_list
-        }
+        },
+        revalidate:3600,
     }
 }
