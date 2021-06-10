@@ -1,2 +1,6 @@
 https://blog.vivita.io/entry/2020/08/17/112932
 
+https://qiita.com/thesugar/items/47ec3d243d00ddd0b4ed
+
+https://docs.aws.amazon.com/ja_jp/amplify/latest/userguide/environment-variables.html
+https://docs.aws.amazon.com/ja_jp/amplify/latest/userguide/getting-started.html
