@@ -24,7 +24,7 @@ export async function getStaticPaths(){
     const paths = await getAllAreaLargeIds();
     return {
         paths,
-        fallback:true,
+        fallback:false,
     }
 }
 

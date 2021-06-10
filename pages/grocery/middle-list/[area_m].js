@@ -27,7 +27,7 @@ export async function getStaticPaths(){
     const paths = await getAllAreaMiddleIds();
     return {
         paths,
-        fallback:true,
+        fallback:false,
     }
 }
 
@@ -38,6 +38,5 @@ export async function getStaticProps({params}){
         props: {
             grocery_list
         },
-        revalidate:3600,
     }
 }
