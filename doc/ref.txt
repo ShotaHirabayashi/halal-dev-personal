@@ -4,3 +4,11 @@ https://qiita.com/thesugar/items/47ec3d243d00ddd0b4ed
 
 https://docs.aws.amazon.com/ja_jp/amplify/latest/userguide/environment-variables.html
 https://docs.aws.amazon.com/ja_jp/amplify/latest/userguide/getting-started.html
+
+
+
+https://docs.aws.amazon.com/ja_jp/amplify/latest/userguide/server-side-rendering-amplify.html#deploy-nextjs-app
+https://github.com/serverless-nextjs/serverless-next.js/issues/1067
+
+https://zenn.dev/catnose99/scraps/5e3d51d75113d3
+
