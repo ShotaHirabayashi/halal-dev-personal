@@ -6,7 +6,7 @@ frontend:
         - npm ci --production=false
     build:
       commands:
-        - npm run export
+        - npm run build
   artifacts:
     baseDirectory: .next
     files:
