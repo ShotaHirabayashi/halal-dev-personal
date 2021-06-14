@@ -20,6 +20,9 @@ export default RestaurantPriority
 export async function getStaticProps(){
     const restaurants = await getAllPriorityData()
     return {
-        props: {restaurants}
+        props: {
+            restaurants
+        },
+        revalidate:7200
     }
 }

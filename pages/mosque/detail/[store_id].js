@@ -21,7 +21,7 @@ export async function getStaticPaths(){
 
     return {
         paths,
-        fallback:false,
+        fallback:true,
     }
 }
 
@@ -32,5 +32,6 @@ export async function getStaticProps({params}){
         props: {
             mosque
         },
+        revalidate:7200,
     }
 }

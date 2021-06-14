@@ -29,8 +29,7 @@ export async function getStaticPaths(){
 
     return {
         paths,
-        // 101番の場合は404
-        fallback:false,
+        fallback:true,
     }
 }
 
@@ -39,6 +38,7 @@ export async function getStaticProps({params}){
     return {
         props: {
             post
-        }
+        },
+        revaildate:7200
     }
 }

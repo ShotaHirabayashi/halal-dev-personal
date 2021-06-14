@@ -19,6 +19,9 @@ export default Pref
 export async function getStaticProps(){
     const prefs = await getAllPrefData()
     return {
-        props: {prefs}
+        props: {
+            prefs
+        },
+        revalidate:7200,
     }
 }

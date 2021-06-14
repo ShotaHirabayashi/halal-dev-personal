@@ -20,6 +20,9 @@ export default RestaurantTags
 export async function getStaticProps(){
     const tags = await getAllTagsData()
     return {
-        props: {tags}
+        props: {
+            tags
+        },
+        revalidate:7200,
     }
 }
