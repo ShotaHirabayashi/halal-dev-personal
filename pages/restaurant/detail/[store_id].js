@@ -5,11 +5,11 @@ import {getAllDetailData,getRestaurantDetailData,getAllRestaurantDetailIds} from
 
 const RestaurantDetail = ({restaurant}) => {
     return (
-        <Layout title={restaurant.store_name}>
-            <p>{Object.keys(restaurant).length && restaurant.store_name}</p>
-            <p>{Object.keys(restaurant).length && restaurant.address}</p>
-            <p>{Object.keys(restaurant).length && restaurant.main_msg}</p>
-            <img src={Object.keys(restaurant).length && restaurant.main_img} height={100} />
+        <Layout title={restaurant.store_name && restaurant.store_name}>
+            <p>{restaurant.store_name && restaurant.store_name}</p>
+            <p>{restaurant.address && restaurant.address}</p>
+            <p>{restaurant.main_msg && restaurant.main_msg}</p>
+            <img src={restaurant.main_img && restaurant.main_img} height={100} />
         </Layout>
     )
 }
@@ -28,7 +28,7 @@ export async function getStaticPaths(){
 
 
 export async function getStaticProps({params}){
-    const {restaurant:restaurant} = await getRestaurantDetailData(params.store_id);
+    const restaurant = await getRestaurantDetailData(params.store_id);
     return {
         props: {
             restaurant

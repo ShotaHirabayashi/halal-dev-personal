@@ -4,11 +4,11 @@ import {getMosqueDetailData,getAllMosqueDetailIds} from '../../../lib/mosqueDeta
 
 const MosqueDetail = ({mosque}) => {
     return (
-        <Layout title={mosque.store_name}>
-            <p>{Object.keys(mosque).length && mosque.store_name}</p>
-            <p>{Object.keys(mosque).length &&mosque.address}</p>
-            <p>{Object.keys(mosque).length &&mosque.main_msg}</p>
-            <img src={Object.keys(mosque).length && mosque.main_img} height={100} />
+        <Layout title={mosque.store_name && mosque.store_name}>
+            <p>{mosque.store_name && mosque.store_name}</p>
+            <p>{mosque.address && mosque.address}</p>
+            <p>{mosque.main_msg && mosque.main_msg}</p>
+            <img src={mosque.main_img && mosque.main_img} height={100} />
         </Layout>
     )
 }
@@ -27,7 +27,7 @@ export async function getStaticPaths(){
 
 
 export async function getStaticProps({params}){
-    const {mosque:mosque} = await getMosqueDetailData(params.store_id);
+    const mosque = await getMosqueDetailData(params.store_id);
     return {
         props: {
             mosque
