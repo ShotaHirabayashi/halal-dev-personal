@@ -1,7 +1,7 @@
 import Link from 'next/link'
 
 
-const MiddleListComp = ({store,category}) => {
+const StoreListComp = ({store,category}) => {
     return (
         <div>
             <span>{store.store_name}</span>{":"}
@@ -12,4 +12,4 @@ const MiddleListComp = ({store,category}) => {
     )
 }
 
-export default MiddleListComp
+export default StoreListComp

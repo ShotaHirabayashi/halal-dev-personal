@@ -1,5 +1,5 @@
 import Layout from '../../../components/Layout'
-import MiddleListComp from '../../../components/MiddleList'
+import StoreListComp from '../../../components/StoreList'
 import {useRouter} from 'next/router'
 
 
@@ -17,7 +17,7 @@ export default function RestraurantSmall({grocery_list}){
     <Layout>
         <h2>Grocery list about this area</h2>
         <ul className='mt-5'>
-            {grocery_list && grocery_list.grocery_list.map((grocery) => <MiddleListComp key={grocery.store_id} store={grocery} category="grocery"/>)}
+            {grocery_list && grocery_list.grocery_list.map((grocery) => <StoreListComp key={grocery.store_id} store={grocery} category="grocery"/>)}
         </ul>
     </Layout>)
 }

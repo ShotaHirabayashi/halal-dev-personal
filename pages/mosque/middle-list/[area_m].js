@@ -1,5 +1,5 @@
 import Layout from '../../../components/Layout'
-import MiddleListComp from '../../../components/MiddleList'
+import StoreListComp from '../../../components/StoreList'
 import {useRouter} from 'next/router'
 import {getAllAreaMiddleIds,getMosqueMiddleData} from '../../../lib/mosqueMiddle'
 
@@ -15,7 +15,7 @@ export default function RestraurantSmall({mosque_list}){
     <Layout>
         <h2>Mosuqe list about this area</h2>
         <ul className='mt-5'>
-            {mosque_list && mosque_list.mosque_list.map((mosque) => <MiddleListComp key={mosque.store_id} store={mosque} category="mosque"/>)}
+            {mosque_list && mosque_list.mosque_list.map((mosque) => <StoreListComp key={mosque.store_id} store={mosque} category="mosque"/>)}
         </ul>
     </Layout>)
 }

@@ -9,34 +9,34 @@ export default function Layout({children, title="HP by bayashi"}) {
             </Head>
             <header>
                 <nav className="bg-gray-800 w-screen">
-                    <div className="flex items-center pl-8 h-14">
+                    <div className="flex items-center pl-3 h-14">
                         <div className="flex sapace-x-4">
                             <Link href="/">
-                                <a className="text-gray-300 hover:gb-gray-700 px-3 py-2 rounded">
+                                <a className="text-gray-300 hover:gb-gray-700 px-2 py-2 rounded">
                                     Home
                                 </a>
                             </Link>
                             <Link href="/blog-page">
-                                <a className="text-gray-300 hover:gb-gray-700 px-3 py-2 rounded">
+                                <a className="text-gray-300 hover:gb-gray-700 px-2 py-2 rounded">
                                     BLOG
                                 </a>
                             </Link>
                             <Link href="/restaurant/pref-page">
-                                <a className="text-gray-300 hover:gb-gray-700 px-3 py-2 rounded">
+                                <a className="text-gray-300 hover:gb-gray-700 px-2 py-2 rounded">
                                     RESTAURANT
                                 </a>
                             </Link>
                             <Link href="/grocery/pref-page">
-                                <a className="text-gray-300 hover:gb-gray-700 px-3 py-2 rounded">
+                                <a className="text-gray-300 hover:gb-gray-700 px-2 py-2 rounded">
                                     GROCERY
                                 </a>
                             </Link>
                             <Link href="/mosque/pref-page">
-                                <a className="text-gray-300 hover:gb-gray-700 px-3 py-2 rounded">
+                                <a className="text-gray-300 hover:gb-gray-700 px-2 py-2 rounded">
                                     MOSQUE
                                 </a>
                             </Link>
-                            <Link href="/restaurant-tags">
+                            {/* <Link href="/restaurant-tags">
                                 <a className="text-gray-300 hover:gb-gray-700 px-3 py-2 rounded">
                                     TAGS
                                 </a>
@@ -45,7 +45,7 @@ export default function Layout({children, title="HP by bayashi"}) {
                                 <a className="text-gray-300 hover:gb-gray-700 px-3 py-2 rounded">
                                     PRIORITY
                                 </a>
-                            </Link>
+                            </Link> */}
                         </div>
                     </div>
 

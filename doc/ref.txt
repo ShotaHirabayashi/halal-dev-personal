@@ -21,3 +21,11 @@ https://github.com/garmeeh/next-seo
 
 SSGの時の画像image
 https://github.com/cyrilwanner/next-optimized-images
+
+
+
+https://github.com/aws-amplify/amplify-console/issues/1854
+https://tech-blog.s-yoshiki.com/entry/214
+https://docs.aws.amazon.com/ja_jp/amplify/latest/userguide/server-side-rendering-amplify.html#deploy-nextjs-app
+
+https://zenn.dev/luvmini511/articles/1523113e0dec58
