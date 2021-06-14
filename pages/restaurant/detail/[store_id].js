@@ -5,11 +5,11 @@ import {getAllDetailData,getRestaurantDetailData,getAllRestaurantDetailIds} from
 
 const RestaurantDetail = ({restaurant}) => {
     return (
-        <Layout title={restaurant.restaurant && restaurant.restaurant.store_name}>
-            <p>{restaurant.restaurant && restaurant.restaurant.store_name}</p>
-            <p>{restaurant.restaurant && restaurant.restaurant.address}</p>
-            <p>{restaurant.restaurant && restaurant.restaurant.main_msg}</p>
-            <img src={restaurant.restaurant && restaurant.restaurant.main_img} height={100} />
+        <Layout title={restaurant && restaurant.restaurant.store_name}>
+            <p>{restaurant && restaurant.restaurant.store_name}</p>
+            <p>{restaurant && restaurant.restaurant.address}</p>
+            <p>{restaurant && restaurant.restaurant.main_msg}</p>
+            <img src={restaurant && restaurant.restaurant.main_img} height={100} />
         </Layout>
     )
 }

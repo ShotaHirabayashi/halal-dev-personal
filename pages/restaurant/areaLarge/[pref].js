@@ -38,7 +38,6 @@ export async function getStaticPaths(){
 export async function getStaticProps({params}){
     const area_l = await (getAreaLargeData(params.pref));
     const area_l_restaurant_list = await(getAreaLargeRestaurantData(params.pref))
-    console.log(area_l_restaurant_list)
     return {
         props: {
             area_l,
