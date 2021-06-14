@@ -7,10 +7,10 @@ import {useRouter} from 'next/router'
 const GroceryDetail = ({grocery}) => {
     return (
         <Layout title={grocery.store_name}>
-            <p>{grocery.store_name}</p>
-            <p>{grocery.address}</p>
-            <p>{grocery.main_msg}</p>
-            <img src={grocery.main_img} height={100} />
+            <p>{Object.keys(grocery).length && grocery.store_name}</p>
+            <p>{Object.keys(grocery).length && grocery.address}</p>
+            <p>{Object.keys(grocery).length && grocery.main_msg}</p>
+            <img src={Object.keys(grocery).length && grocery.main_img} height={100} />
         </Layout>
     )
 }

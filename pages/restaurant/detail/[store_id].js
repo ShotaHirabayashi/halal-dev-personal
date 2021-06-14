@@ -6,10 +6,10 @@ import {getAllDetailData,getRestaurantDetailData,getAllRestaurantDetailIds} from
 const RestaurantDetail = ({restaurant}) => {
     return (
         <Layout title={restaurant.store_name}>
-            <p>{restaurant.store_name}</p>
-            <p>{restaurant.address}</p>
-            <p>{restaurant.main_msg}</p>
-            <img src={restaurant.main_img} height={100} />
+            <p>{Object.keys(restaurant).length && restaurant.store_name}</p>
+            <p>{Object.keys(restaurant).length && restaurant.address}</p>
+            <p>{Object.keys(restaurant).length && restaurant.main_msg}</p>
+            <img src={Object.keys(restaurant).length && restaurant.main_img} height={100} />
         </Layout>
     )
 }
