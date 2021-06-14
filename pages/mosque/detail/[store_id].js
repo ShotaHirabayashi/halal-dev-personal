@@ -4,11 +4,11 @@ import {getMosqueDetailData,getAllMosqueDetailIds} from '../../../lib/mosqueDeta
 
 const MosqueDetail = ({mosque}) => {
     return (
-        <Layout title={mosque.store_name && mosque.store_name}>
-            <p>{mosque.store_name && mosque.store_name}</p>
-            <p>{mosque.address && mosque.address}</p>
-            <p>{mosque.main_msg && mosque.main_msg}</p>
-            <img src={mosque.main_img && mosque.main_img} height={100} />
+        <Layout title={mosque.mosque && mosque.mosque.store_name}>
+            <p>{mosque.mosque && mosque.mosque.store_name}</p>
+            <p>{mosque.mosque && mosque.mosque.address}</p>
+            <p>{mosque.mosque && mosque.mosque.main_msg}</p>
+            <img src={mosque.mosque && mosque.mosque.main_img} height={100} />
         </Layout>
     )
 }
