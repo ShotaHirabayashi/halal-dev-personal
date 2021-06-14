@@ -19,7 +19,7 @@ export default function AreaLarge({area_l,area_l_mosque_list}){
         </ul>
 
         <ul className='mt-5'>
-        {area_l_mosque_list && area_l_mosque_list.area_l_mosque_list.map((mosque) => <StoreListComp key={mosque.store_id} store={mosque} category="mosque"/>)}
+        {area_l_mosque_list.area_l_mosque_list && area_l_mosque_list.area_l_mosque_list.map((mosque) => <StoreListComp key={mosque.store_id} store={mosque} category="mosque"/>)}
         </ul>
     </Layout>)
 }

@@ -20,7 +20,7 @@ export default function AreaLarge({area_l,area_l_restaurant_list}){
         <br />
 
         <ul className='mt-5'>
-        {area_l_restaurant_list && area_l_restaurant_list.area_l_restaurant_list.map((restaurant) => <StoreListComp key={restaurant.store_id} store={restaurant} category="restaurant"/>)}
+        {area_l_restaurant_list.area_l_restaurant_list && area_l_restaurant_list.area_l_restaurant_list.map((restaurant) => <StoreListComp key={restaurant.store_id} store={restaurant} category="restaurant"/>)}
         </ul>
     </Layout>)
 }

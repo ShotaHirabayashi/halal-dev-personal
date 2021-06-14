@@ -15,7 +15,7 @@ export default function RestraurantSmall({mosque_list}){
     <Layout>
         <h2>Mosuqe list about this area</h2>
         <ul className='mt-5'>
-            {mosque_list && mosque_list.mosque_list.map((mosque) => <StoreListComp key={mosque.store_id} store={mosque} category="mosque"/>)}
+            {mosque_list.mosque_list && mosque_list.mosque_list.map((mosque) => <StoreListComp key={mosque.store_id} store={mosque} category="mosque"/>)}
         </ul>
     </Layout>)
 }

@@ -19,7 +19,7 @@ export default function AreaMiddle({area_m,area_m_restaurant_list}){
         </ul>
 
         <ul className='mt-5'>
-        {area_m_restaurant_list && area_m_restaurant_list.area_m_restaurant_list.map((restaurant) => <StoreListComp key={restaurant.store_id} store={restaurant} category="restaurant"/>)}
+        {area_m_restaurant_list.area_m_restaurant_list && area_m_restaurant_list.area_m_restaurant_list.map((restaurant) => <StoreListComp key={restaurant.store_id} store={restaurant} category="restaurant"/>)}
         </ul>
     </Layout>)
 }

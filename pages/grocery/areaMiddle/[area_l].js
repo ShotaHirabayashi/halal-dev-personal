@@ -20,7 +20,7 @@ export default function AreaMiddle({area_m,area_m_grocery_list}){
         </ul>
 
         <ul className='mt-5'>
-        {area_m_grocery_list && area_m_grocery_list.area_m_grocery_list.map((grocery) => <StoreListComp key={grocery.store_id} store={grocery} category="grocery"/>)}
+        {area_m_grocery_list.area_m_grocery_list && area_m_grocery_list.area_m_grocery_list.map((grocery) => <StoreListComp key={grocery.store_id} store={grocery} category="grocery"/>)}
         </ul>
     </Layout>)
 }

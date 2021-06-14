@@ -17,7 +17,7 @@ export default function RestraurantSmall({restaurant_list}){
     <Layout>
         <h2>Restraurant list about this area</h2>
         <ul className='mt-5'>
-            {restaurant_list && restaurant_list.restaurant_list.map((restaurant) => <StoreListComp key={restaurant.store_id} store={restaurant} category="restaurant"/>)}
+            {restaurant_list.restaurant_list && restaurant_list.restaurant_list.map((restaurant) => <StoreListComp key={restaurant.store_id} store={restaurant} category="restaurant"/>)}
         </ul>
     </Layout>)
 }

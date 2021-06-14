@@ -19,7 +19,7 @@ export default function AreaMiddle({area_m,area_m_mosque_list}){
         </ul>
 
         <ul className='mt-5'>
-        {area_m_mosque_list && area_m_mosque_list.area_m_mosque_list.map((mosque) => <StoreListComp key={mosque.store_id} store={mosque} category="mosque"/>)}
+        {area_m_mosque_list.area_m_mosque_list && area_m_mosque_list.area_m_mosque_list.map((mosque) => <StoreListComp key={mosque.store_id} store={mosque} category="mosque"/>)}
         </ul>
     </Layout>)
 }
