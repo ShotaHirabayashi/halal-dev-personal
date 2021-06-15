@@ -25,7 +25,7 @@ export async function getStaticPaths(){
     const paths = await getAllAreaMiddleIds();
     return {
         paths,
-        fallback:true,
+        fallback:false,
     }
 }
 
@@ -36,6 +36,5 @@ export async function getStaticProps({params}){
         props: {
             mosque_list
         },
-        revalidate:7200,
     }
 }

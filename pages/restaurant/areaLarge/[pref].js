@@ -31,7 +31,7 @@ export async function getStaticPaths(){
     const paths = await getAllAreaLargeIds();
     return {
         paths,
-        fallback:true,
+        fallback:false,
     }
 }
 
@@ -43,6 +43,5 @@ export async function getStaticProps({params}){
             area_l,
             area_l_restaurant_list
         },
-        revalidate:7200,
     }
 }
