@@ -9,14 +9,14 @@ const GroceryDetail = ({grocery}) => {
         <Layout title={grocery && grocery.grocery.store_name}>
             <div className="mt-8">
                 <img src={grocery && grocery.grocery.sub1_img} height={100} width={200}/>
-                <p>{grocery.grocery.pref.sub1_head}</p>
-                <p>{grocery.grocery.pref.sub1_msg}</p>
+                <p>{grocery.grocery.sub1_head}</p>
+                <p>{grocery.grocery.sub1_msg}</p>
                 <img src={grocery && grocery.grocery.sub2_img} height={100} width={200}/>
-                <p>{grocery.grocery.pref.sub2_head}</p>
-                <p>{grocery.grocery.pref.sub2_msg}</p>
+                <p>{grocery.grocery.sub2_head}</p>
+                <p>{grocery.grocery.sub2_msg}</p>
                 <img src={grocery && grocery.grocery.sub3_img} height={100} width={200}/>  
-                <p>{grocery.grocery.pref.sub3_head}</p> 
-                <p>{grocery.grocery.pref.sub3_msg}</p>             
+                <p>{grocery.grocery.sub3_head}</p> 
+                <p>{grocery.grocery.sub3_msg}</p>             
             </div>
             <img src={grocery && grocery.grocery.main_img} height={100} />
             <h4>{grocery.grocery.pref.pref_name} &gt; {grocery.grocery.area_large.areaname_l} &gt; {grocery.grocery.area_middle.areaname_m}</h4>

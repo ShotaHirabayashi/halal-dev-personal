@@ -8,14 +8,14 @@ const RestaurantDetail = ({restaurant}) => {
         <Layout title={restaurant && restaurant.restaurant.store_name}>
             <div className="mt-8">
                 <img src={restaurant && restaurant.restaurant.sub1_img} height={100} width={200}/>
-                <p>{restaurant.restaurant.pref.sub1_head}</p>
-                <p>{restaurant.restaurant.pref.sub1_msg}</p>
+                <p>{restaurant.restaurant.sub1_head}</p>
+                <p>{restaurant.restaurant.sub1_msg}</p>
                 <img src={restaurant && restaurant.restaurant.sub2_img} height={100} width={200}/>
-                <p>{restaurant.restaurant.pref.sub2_head}</p>
-                <p>{restaurant.restaurant.pref.sub2_msg}</p>
+                <p>{restaurant.restaurant.sub2_head}</p>
+                <p>{restaurant.restaurant.sub2_msg}</p>
                 <img src={restaurant && restaurant.restaurant.sub3_img} height={100} width={200}/>  
-                <p>{restaurant.restaurant.pref.sub3_head}</p> 
-                <p>{restaurant.restaurant.pref.sub3_msg}</p>             
+                <p>{restaurant.restaurant.sub3_head}</p> 
+                <p>{restaurant.restaurant.sub3_msg}</p>             
             </div>
             <img src={restaurant && restaurant.restaurant.main_img} height={100} width={400}/>
             <h4>{restaurant.restaurant.pref.pref_name} &gt; {restaurant.restaurant.area_large.areaname_l} &gt; {restaurant.restaurant.area_middle.areaname_m}</h4>

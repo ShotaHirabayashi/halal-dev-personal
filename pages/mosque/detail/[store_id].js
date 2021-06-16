@@ -7,14 +7,14 @@ const MosqueDetail = ({mosque}) => {
         <Layout title={mosque && mosque.mosque.store_name}>
             <div className="mt-8">
                 <img src={mosque && mosque.mosque.sub1_img} height={100} width={200}/>
-                <p>{mosque.mosque.pref.sub1_head}</p>
-                <p>{mosque.mosque.pref.sub1_msg}</p>
+                <p>{mosque.mosque.sub1_head}</p>
+                <p>{mosque.mosque.sub1_msg}</p>
                 <img src={mosque && mosque.mosque.sub2_img} height={100} width={200}/>
-                <p>{mosque.mosque.pref.sub2_head}</p>
-                <p>{mosque.mosque.pref.sub2_msg}</p>
+                <p>{mosque.mosque.sub2_head}</p>
+                <p>{mosque.mosque.sub2_msg}</p>
                 <img src={mosque && mosque.mosque.sub3_img} height={100} width={200}/>  
-                <p>{mosque.mosque.pref.sub3_head}</p> 
-                <p>{mosque.mosque.pref.sub3_msg}</p>             
+                <p>{mosque.mosque.sub3_head}</p> 
+                <p>{mosque.mosque.sub3_msg}</p>             
             </div>
             <img src={mosque && mosque.mosque.main_img} height={100} />
             <h4>{mosque.mosque.pref.pref_name} &gt; {mosque.mosque.area_large.areaname_l} &gt; {mosque.mosque.area_middle.areaname_m}</h4>
