@@ -17,7 +17,7 @@ const MosqueDetail = ({mosque}) => {
                 <p>{mosque.mosque.sub3_msg}</p>             
             </div>
             <img src={mosque && mosque.mosque.main_img} height={100} />
-            <h4>{mosque.mosque.pref.pref_name} &gt; {mosque.mosque.area_large.areaname_l} &gt; {mosque.mosque.area_middle.areaname_m}</h4>
+            <h4>{mosque.mosque.pref &&　mosque.mosque.pref.pref_name} &gt; {mosque.mosque.area_large &&　mosque.mosque.area_large.areaname_l} &gt; {mosque.mosque.area_middle &&　mosque.mosque.area_middle.areaname_m}</h4>
             <table className="table-fixed mt-6 mb-8 border">
                 <tbody>
                     <tr>

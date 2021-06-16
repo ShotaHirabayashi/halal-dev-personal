@@ -18,7 +18,7 @@ const RestaurantDetail = ({restaurant}) => {
                 <p>{restaurant.restaurant.sub3_msg}</p>             
             </div>
             <img src={restaurant && restaurant.restaurant.main_img} height={100} width={400}/>
-            <h4>{restaurant.restaurant.pref.pref_name} &gt; {restaurant.restaurant.area_large.areaname_l} &gt; {restaurant.restaurant.area_middle.areaname_m}</h4>
+            <h4>{restaurant.restaurant.pref &&　restaurant.restaurant.pref.pref_name} &gt; {restaurant.restaurant.area_large &&　restaurant.restaurant.area_large.areaname_l} &gt; {restaurant.restaurant.area_middle &&　restaurant.restaurant.area_middle.areaname_m}</h4>
 
             <table className="table-fixed mt-6 mb-8 border">
                 <tbody>

@@ -19,7 +19,7 @@ const GroceryDetail = ({grocery}) => {
                 <p>{grocery.grocery.sub3_msg}</p>             
             </div>
             <img src={grocery && grocery.grocery.main_img} height={100} />
-            <h4>{grocery.grocery.pref.pref_name} &gt; {grocery.grocery.area_large.areaname_l} &gt; {grocery.grocery.area_middle.areaname_m}</h4>
+            <h4>{grocery.grocery.pref &&　grocery.grocery.pref.pref_name} &gt; {grocery.grocery.area_large &&　grocery.grocery.area_large.areaname_l} &gt; {grocery.grocery.area_middle &&　grocery.grocery.area_middle.areaname_m}</h4>
 
 
             <table className="table-fixed mt-6 mb-8 border">
