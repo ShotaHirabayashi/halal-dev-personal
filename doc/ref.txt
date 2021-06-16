@@ -29,3 +29,26 @@ https://tech-blog.s-yoshiki.com/entry/214
 https://docs.aws.amazon.com/ja_jp/amplify/latest/userguide/server-side-rendering-amplify.html#deploy-nextjs-app
 
 https://zenn.dev/luvmini511/articles/1523113e0dec58
+
+
+エラーメッセージはこれ！！！
+https://github.com/fkhadra/react-toastify
+メッセージのクリエイトページ
+https://fkhadra.github.io/react-toastify/introduction/
+
+
+
+slug自動生成
+npm i slugfy
+
+時間あわせるDBと
+npm i moment
+
+
+モーダルの作り方
+https://devrecipes.net/modal-component-with-next-js/
+https://nextjs.org/docs/advanced-features/custom-document　
+
+
+react-icons
+https://www.npmjs.com/package/react-icons
